@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Requeridas meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Lionel Pacheaco Art</title>
+  <!--cargar el archivo bootstrap.css-->
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <!--cargar el archivo para usar los iconos fontawesome.min.css-->
+  <link rel="stylesheet" href="css/fontawesome.css">
+  <link rel="stylesheet" href="css/solid.css">
+
+  <!--cargar el archivo para usar la fuente de icomoon-->
+  <link rel="stylesheet" href="css/icomoon.css">
+
+  <!--cargar el archivo css para usar el carousel-->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <!--cargar el archivo css del sitio estilos.css-->
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!--cargar el archivo del favicon-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <!-- Crear seccion -->
+  <section class="seccion-head">
+    
+    <!-- Crear el header -->
+    <header class="logo-header navbar fixed-top" role="banner">
+      <!--insertar div con clase container de bootstrap-->
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="images/logo.svg" alt="logo del sitio">
+        </a>
+        <!-- <i class="fa-solid fa-bars"> </i>-->
+        <button type="button" class="boton-menu d-md-none" data-toggle="collapse" data-target="#menu-header"
+          aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+          
+        <!-- Crear el menu -->
+        <nav id="menu-header" class="collapse">
+          <ul>
+            <!-- Crear los items -->
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="artist.html">Artist</a></li>
+            <li><a href="artwork.html">Artwork</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      
+      </div>
+    </header>
+
+    <div class="texto-header text-center">
+
+      <div class="container">
+        <h1 class="display-4 titulo">Lionel Pacheco</h1>
+        <h4>Bienvenidos al sitio de este talentoso pintor impresionista argentino</h4>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- seccion de la imagen -->
+  <!-- usar <main></main> para la seccion mas importante -->
+  <!-- usar <article></article> para el contenido en <main></main> -->
+
+  <div class="container">
+    
+  </div>
+
+  <!-- contiene info es para el lector de pantallas lo identifique -->
+  <footer class="pie" role="contentinfo">
+
+    <div class="container">
+        
+      <ul class="redes">
+        <li><a href="https://www.facebook.com/lionelpachecopintura/" target="_blank"><span class="icon-icon-facebook"><span class="path1"></span><span
+                class="path2"></span></span></a>
+        </li>
+        <li><a href="https://www.instagram.com/lionel.pacheco/?hl=es" target="_blank"><span class="icon-icon-instagram"><span class="path1"></span><span
+                class="path2"></span></span></a></li>
+        <li><a href="https://www.twitter.com/lionelpacheco?lang=es" target="_blank"><span class="icon-icon-twitter"><span class="path1"></span><span
+                class="path2"></span></span></a>
+        </li>
+      </ul>
+      <!-- iconos redes sociales con iconos de font awesome
+    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li> 
+  -->
+      <p class="mail"><a href="mailto:pachecolionel@hotmail.com?Subject=Mensaje%20para%20Lionel
+        &body=Me%20gustaria%20tener%20informacion%20de:
+        %0D%0A%0D%0AGracias%20por%20comunicarse.">E-mail:pachecolionel&#64hotmail.com</a></p>
+      <p class="copy">&#174; Lionel Pacheco 2023 todos los derechos reservados</p>
+
+    </div>
+  </footer>
+
+  <!-- carga de archivos JS-->
+  <script src="js/jquery-3.6.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true, // si vueleve al 1 despues de llegar al final //
+        margin: 0,  // el margen entre foto y foto //
+        dots: true, // muestra los puntos
+        dotsEach: true, // un punto por cada imagen
+        autoplay: true, // se reproduce solo
+        autoplayTimeout: 5000, // avanza cada 5seg
+        autoplayHoverPause: true, // se pausa cuando esta el cursor arriba
+        autoWidth: false, // en true repite las img en todo el ancho de la pantalla //
+        responsive: {
+          0: {
+            items: 1
+          },
+          500: {
+            items: 2,
+            margin: 20,
+          },
+          800: {
+            items: 3,
+            margin: 20,
+          },
+          1000: {
+            items: 4,
+            margin: 20,
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
