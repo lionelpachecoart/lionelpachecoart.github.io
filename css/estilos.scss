@@ -1,0 +1,508 @@
+//---------------------------
+// COLORES SITIO
+//---------------------------
+/* Una vez definidas las variables para aplicar los colores
+se usan los nombres que definimos Ej: color: $texto; */
+
+$texto: #111111;
+$color01: #372732;
+$color02: #6633cc;
+$color03: #e4de45;
+
+@font-face {
+    font-family: 'open';
+    src: url('../fonts/open/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/open/opensans-regular-webfont.woff') format('woff'),
+        url('../fonts/open/opensans-regular-webfont.ttf') format('truetype'),
+        url('../fonts/open/opensans-regular-webfont.svg#mi_fuente') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rock';
+    src: url('../fonts/rockwell/rockwell-eb-webfont.eot?#iefix') format('embedded-ultratype'),
+        url('../fonts/rockwell/rockwell-eb-webfont.woff') format('woff'),
+        url('../fonts/rockwell/rockwell-eb-webfont.ttf') format('truetype'),
+        url('../fonts/rockwell/rockwell-eb-webfont.svg#mi_fuente') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* The box-sizing property allows us to include the padding and border 
+    in an element's total width and height. */
+    box-sizing: border-box;
+    /* saca el estilo de texto especialmente hipervinculos */
+    text-decoration: none;
+    /* saca estilo de listas */
+    list-style: none;
+}
+
+html {
+    /* se define en pixeles el valor base (las unidades relativas se basan en este valor) 
+    en las demas se usan unidades relativas como rem */
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $texto;
+    font-family: "open", "Roboto", sans-serif;
+}
+
+.titulo {
+    font-family: "rock", "Roboto", sans-serif;
+    text-transform: uppercase;
+}
+
+.artist .seccion-head {
+    height: 5.5rem;
+}
+
+.btn-primary {
+    background-color: $color03;
+    color: $color01;
+    border-color: transparent;
+    transition: all .5s ease;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: $color02;
+    border-color: transparent;
+}
+
+.btn-secondary {
+    background-color: #777;
+    border-color: transparent;
+    transition: all .5s ease;
+}
+
+.btn-secondary:hover {
+    background-color: $color02;
+    border-color: transparent;
+}
+
+/* ------------------------------------
+ estilo fondo
+---------------------------------------*/
+
+.seccion-head {
+    background: url("../images/back.jpg") no-repeat left top;
+    background-position-y: 5.5rem;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*-------------------------------------
+estilos del menu
+--------------------------------------*/
+
+/* estilo del header que contiene todo */
+.logo-header {
+    background-color: #fff;
+    padding: 1.5rem 0 0 0;
+}
+
+/* estilo del div que es el padre flex */
+.logo-header .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+}
+
+/* estilo logo del sitio */
+.logo-header .logo img {
+    width: 100px;
+    height: auto;
+    margin: .5rem 0 .5rem 1rem;
+}
+
+/* estilo boton del menu */
+.boton-menu {
+    font-size: 1.2rem;
+    background: transparent;
+    border: 0;
+    margin: 0 1rem;
+}
+
+/*------------------------------*/
+/* ------------------------------------
+ estilo carousel
+---------------------------------------*/
+
+#carousel-example-2 {
+    margin-top: 7rem;
+}
+
+/*------------------------------*/
+/* ------------------------------------
+ estilo menu desplegable
+---------------------------------------*/
+#menu-header {
+    flex: 1 1 100%;
+}
+
+#menu-header ul {
+    padding: 0;
+    margin: 0;
+}
+
+.fa-bars {
+    font-size: 2rem;
+}
+
+#menu-header ul li a {
+    display: block;
+    font-size: 0.9rem;
+    color: $color01;
+    padding: .5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#menu-header ul li a:hover {
+    color: $color02;
+}
+
+#menu-header ul li.active a {
+    color: $color02;
+}
+
+/*------------------------------*/
+
+/* ------------------------------------
+ estilo menu media queries
+---------------------------------------*/
+@media (min-width:768px) {
+    #menu-header {
+        height: auto !important;
+        display: block;
+        flex: 0 1 auto;
+    }
+
+    #menu-header ul {
+        display: flex;
+    }
+
+    #menu-header ul li a {
+        padding: 1.2rem .8rem .4rem .8rem;
+        margin: 0 .3rem;
+        text-transform: capitalize;
+        border-bottom: 4px solid transparent;
+        /*evitar errores in IE*/
+        /*border-bottom: 1px solid #00acee;*/
+    }
+
+    #menu-header ul li.active a {
+        color: $color02;
+    }
+
+    #menu-header ul li a:hover {
+        border-bottom: 4px solid $color02;
+        color: $color02;
+        transition: all .5s ease;
+    }
+}
+
+/* ------------------------------------
+ estilo imagen home
+---------------------------------------*/
+
+.texto-header {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: flex-end;
+    padding: 0 0 2rem 0;
+}
+
+.display-4 {
+    font-size: 3rem;
+    color: $color03;
+}
+
+.texto-header h4 {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/*------------------------------*/
+
+/* ------------------------------------
+ estilo bio
+---------------------------------------*/
+.hero-main {
+    display: flex;
+}
+
+.titulo {
+    color: $color02;
+}
+
+.seccion-head .titulo {
+    color: $color03;
+    text-shadow: 2px 2px 5px $color01;
+}
+
+.img-bio {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.expo h2{
+    margin: 2rem 0;
+}
+
+.expo h4{
+    margin: 2rem 0;
+    
+}
+
+.expo p{
+    font-size: .9rem;
+}
+
+/*------------------------------*/
+
+/* ------------------------------------
+ estilo bio responsive
+---------------------------------------*/
+
+.bio-foto {
+    padding: .5rem 0 1rem 0;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .bio-foto {
+        padding: .4rem .6rem 0 0;
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    .bio-foto {
+        width: 45%;
+    }
+}
+
+/*------------------------------*/
+
+/*-------------------------------
+estilo novedades
+-------------------------------*/
+.calesita .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.calesita a h4 {
+    font-size: 1rem;
+    color: #111111;
+}
+
+.calesita .owl-nav {
+    display: flex;
+    justify-content: center;
+    margin: .5rem 0;
+}
+
+.calesita .prev,
+.calesita .next {
+    font-size: 2.5rem;
+    margin: 0 1rem;
+    color: #3b5998;
+    font-weight: bolder;
+}
+
+.calesita .owl-dots {
+    padding: .5rem 0 0 0;
+    margin-top: 0;
+}
+
+.calesita .prev:hover,
+.calesita .next:hover {
+    color: #00acee;
+}
+
+/*-----------------------------*/
+
+/*------------------------------
+iconos sociales
+-------------------------------*/
+
+.icon-icon-facebook .path1:before {
+    content: "\e900";
+    color: rgb(55, 39, 50);
+    font-size: 2rem;
+}
+
+.icon-icon-facebook .path2:before {
+    content: "\e901";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+.icon-icon-facebook:hover .path1:before {
+    content: "\e900";
+    background: linear-gradient(30deg, #24487d, #3b5998, #7592ce);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: rgb(59, 89, 152); #3b5998 */
+}
+
+.icon-icon-instagram .path1:before {
+    content: "\e902";
+    color: rgb(55, 39, 50);
+    font-size: 2rem;
+}
+
+.icon-icon-instagram .path2:before {
+    content: "\e903";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+.icon-icon-instagram:hover .path1:before {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: rgb(225, 48, 108); #E1306C */
+}
+
+.icon-icon-twitter .path1:before {
+    content: "\e904";
+    color: rgb(55, 39, 50);
+    font-size: 2rem;
+}
+
+.icon-icon-twitter .path2:before {
+    content: "\e905";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+.icon-icon-twitter:hover .path1:before {
+    background: linear-gradient(0deg, #66757f, #00acee, #36d6ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: rgb(29, 161, 242); #1DA1F2 */
+}
+
+/*------------------------------*/
+
+/*------------------------------
+pie
+-------------------------------*/
+.pie {
+    padding: .7rem 0 0 0;
+    font-size: 0.8rem;
+    display: flex;
+}
+
+.pie .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0 0 0;
+    border-top: 1px solid #ddd;
+}
+
+.pie .redes {
+    display: flex;
+    order: 0;
+    margin-bottom: .7rem;
+}
+
+.pie .redes li {
+    margin: 0 .3rem;
+}
+
+.pie .redes li a {
+    text-decoration: none;
+}
+
+.copy {
+    color: #888;
+    order: 2;
+    margin-bottom: .7rem;
+}
+
+.mail {
+    order: 1;
+    margin-bottom: .7rem;
+}
+
+.mail a {
+    color: $texto;
+}
+
+/*---------------------------------
+  media queries pie
+  -----------------------------------*/
+@media (min-width: 768px) {
+    .pie .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .copy {
+        order: 1;
+    }
+
+    .mail {
+        order: 2;
+    }
+
+}
+
+/*---------------------------------
+  galeria
+  -----------------------------------*/
+.galeria .artwork {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artwork .item {
+    margin: 1rem;
+}
+  
+.no-expand {
+/*  box-sizing: border-box; ya esta definida al principio del documento  */
+    width: 0px;
+    min-width: 100%;
+    line-height: 1.42857143;
+    text-align: center;
+    font-size: .9rem;
+    padding: 0;
+    color: #888;
+  }
+
+  /*---------------------------------
+  contacto
+  -----------------------------------*/
+  .contact-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
