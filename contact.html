@@ -69,7 +69,7 @@
         <div class="col-md-8">
           
 
-          <form action="enviar.php">
+          <form action="php/enviar.php" method="post">
             <!-- se usa row como clase para hacer otra columna
               dentro y acomodar el label y el input en ella (anidada) -->
             <div class="form-group row">
@@ -78,7 +78,7 @@
               <label class="col-form-label col-sm-2 offset-sm-1" for="nombre">Nombre</label>
               <!-- cada campo debe tener la clase class="form-control" -->
               <div class="col-sm-9">
-                <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+                <input class="form-control" type="text" id="name" name="nombre" placeholder="Ingrese su nombre">
               </div>
             
             </div>
@@ -88,7 +88,7 @@
               <label class="col-form-label col-sm-2 offset-sm-1" for="correo">E-mail</label>
               
               <div class="col-sm-9">
-                <input class="form-control" type="text" id="correo" name="correo" placeholder="Correo electr&oacute;nico">
+                <input class="form-control" type="text" id="mail" name="correo" placeholder="Correo electr&oacute;nico">
               </div>
             
             </div>
@@ -98,7 +98,7 @@
               <label class="col-form-label col-sm-2 offset-sm-1" for="mensaje">Mensaje</label>
               
               <div class="col-sm-9">
-                <textarea class="form-control" rows="5" id="mensaje" name="mensaje" placeholder="Ingrese su mensaje"></textarea>
+                <textarea class="form-control" rows="5" id="message" name="mensaje" placeholder="Ingrese su mensaje"></textarea>
               </div>
             
             </div>
