@@ -72,9 +72,12 @@
                 commodi explicabo consequuntur dicta. Incidunt accusantium fugiat, soluta,
                 odio aliquam vero minus fugit ut maxime qui iure ipsum dolore!</p>
             <div class="artwork">
-            
+
                 <div class="item">
-                    <a href="contact.html"><img class="img-thumbnail" src="images/proyecto06.jpg" alt=""></a>
+                    <!-- aca se define el boton para el modal-->
+                    <a href="contact.html" data-toggle="modal" data-target="#img01">
+                        <img class="img-thumbnail" src="images/proyecto06.jpg" alt="">
+                    </a>
                     <div class="no-expand mt-3 ">
                         "Your Essay was to My Poems as Reality is to a Dream" 54x54" Oil on canvas (SOLD)
                     </div>
@@ -128,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
 
     </section>
 
@@ -162,6 +165,87 @@
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+
+    <!-- aca va el diseño del modal -->
+
+    <div class="modal fade" id="img01" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Detalles</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <div class="modal-body">
+                <div class="row">
+            
+                    <img src="images/proyecto06.jpg" class="img-fluid mx-auto" alt="imagen descripcion">
+            
+                    <div>
+                        <h4 class="text-center mx-auto mt-3">Nombre (2022)</h4>
+                        <ul class="text-center">
+                            <li>Dimensiones: (60cm x 50cm)</li>
+                            <li>Precio: u&#x24;s 1.000.000</li>
+                            <li>Envio desde C&oacute;rdoba</li>
+                            <li>Firma y certificado de autenticaci&oacute;n</li>
+                        </ul>
+                        <p class="text-center mx-auto my-0 px-3 modal-txt">Amilcar Lionel Pacheco naci&oacute; en Avellaneda, pcia
+                            de Buenos Aires el 5 de Abril
+                            de 1978 y desde que era ni&ntilde;o mostr&oacute; inquietud por el dibujo y la pintura.
+                        </p>
+                    </div>
+                
+                </div>
+            </div>
+          
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div id="img00" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="text-center mb-0">El nombre del cuadro va aca</h3>
+                    <button type="button" class="close float-right" aria-label="Close" data-dismiss="modal">
+                        <span aria-hidden="true">&#xD7;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body pb-0 text-center bg-alt">
+                    <img src="images/proyecto00.jpg" id="galleryImage" class="loaded-image mx-auto img-fluid">
+                </div>
+                <div class="modal-body pb-0  text-left bg-alt">
+                    <h4>Info de la obra</h4>
+                    <ul>
+                        <li> LIMITED EDITION PRINT INCLUDES PROTECTIVE SLEEVE AND CERTIFICATE OF AUTHENTICITY.</li>
+                        <li> PAPER SIZE 40X27” INCHES </li>
+                        <li> EDITION OF ONLY 23 </li>
+                        <li> SUPER HI RES PRINTING QUALITY </li>
+                        <li> SIGNED, TITLED AND NUMBERED IN PENCIL BY THE ARTIST </li>
+                        <li> 300 GSM ENTRADA NATURAL ARCHIVAL COTTON RAG PAPER </li>
+                        <li> FROM BROOKLYN. (PLEASE ALLOW 2-4 WEEKS FOR DELIVERY) </li>
+                    </ul>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Sed autem doloribus, similique, saepe dignissimos vero
+                        molestiae ipsam voluptatum iure nisi qui dolorem.
+                        Nostrum beatae architecto distinctio reiciendis perferendis ea quia.</p>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
