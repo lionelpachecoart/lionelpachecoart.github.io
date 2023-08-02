@@ -68,8 +68,13 @@
       <div class="row">
         <div class="col-md-8">
           
+         <!-- form action="https://formsubmit.co/your@email.com" method="post" 
+         Si todo falla probar con esto de forma provisional 
+         
+         <form action="php/enviar.php" method="POST"> es la forma tradicional pero
+          aca vamos a hacer que detecte el boton submit -->
 
-          <form action="php/enviar.php" method="POST">
+          <form>
             <!-- se usa row como clase para hacer otra columna
               dentro y acomodar el label y el input en ella (anidada) -->
             <div class="form-group row">
@@ -78,7 +83,7 @@
               <label class="col-form-label col-sm-2 offset-sm-1" for="nombre">Nombre</label>
               <!-- cada campo debe tener la clase class="form-control" -->
               <div class="col-sm-9">
-                <input class="form-control" type="text" id="name" name="nombre" placeholder="Ingrese su nombre">
+                <input required class="form-control" type="text" id="name" name="nombre" placeholder="Ingrese su nombre">
               </div>
             
             </div>
@@ -88,7 +93,7 @@
               <label class="col-form-label col-sm-2 offset-sm-1" for="correo">E-mail</label>
               
               <div class="col-sm-9">
-                <input class="form-control" type="text" id="mail" name="correo" placeholder="Correo electr&oacute;nico">
+                <input required class="form-control" type="email" id="mail" name="correo" placeholder="Correo electr&oacute;nico">
               </div>
             
             </div>
@@ -98,7 +103,7 @@
               <label class="col-form-label col-sm-2 offset-sm-1" for="mensaje">Mensaje</label>
               
               <div class="col-sm-9">
-                <textarea class="form-control" rows="5" id="message" name="mensaje" placeholder="Ingrese su mensaje"></textarea>
+                <textarea required class="form-control" rows="5" id="message" name="mensaje" placeholder="Ingrese su mensaje"></textarea>
               </div>
             
             </div>
@@ -158,6 +163,35 @@
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script>
+      const form = document.querySelector('form');
+
+      form.addEventListener('submit', (e) =>{
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+
+        const res = Object.fromEntries(formData);
+        const payload = JSON.stringify(res);
+        console.log(payload);
+
+        for (item of FormData){
+          console.log(item[0], item[1]);
+        };
+        
+        fetch('https://httpbin.org/post',{
+          method: "POST",
+          body: payload,
+          headers:{
+            'Content-Type': 'application/json',
+          }
+        })
+        
+        .then(res => res.json())
+        .then(res => console.log(res));
+      })
+
+    </script>
 
 </body>
 
