@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba form pachecoart</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form method="POST" action="php/send.php" enctype="multipart/form-data" class="form">
+            <input required type="text" class="form-input" placeholder="Nombre" name="nombre">
+            <input required type="text" class="form-input" placeholder="E-mail" name="email">
+            <div class="form-options options-form">
+                <h4 class="options-form-title">Elija lo que quiera</h4>
+                <label for="" class="options-form-item">
+                    <input checked type="radio" name="opcion" value="Si" class="options-form-input">
+                    <span class="options-form-text">Si</span>
+                </label>
+                <label for="" class="options-form-item">
+                    <input type="radio" name="opcion" value="No se" class="options-form-input">
+                    <span class="options-form-text">No se</span>
+                </label>
+
+            </div>
+            <textarea required name="mensaje" placeholder="Mensaje" class="form-input"></textarea>
+            <div class="form-file file-form">
+                <label class="file-form-item">
+                    <input required name="C.V" type="file" accept=".doc, .pdf" class="file-form-input">
+                    <div class="file-form-button button">Elegir Archivo</div>
+                </label>
+                <div class="file-form-name"></div>
+            </div>
+        <label class="form-checkbox checkbox-form">
+            <input type="checkbox" name="elmejor" class="checkbox-form-input">
+            <span class="checkbox-form-text">Prueba de formulario</span>
+        </label>
+        <button class="form-button button-form">Enviar</button>
+        </form>
+    </div>
+    <script src="js/prueba.php.mailer.js"></script>
+</body>
+</html>
