@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form-estilo.css">
     <title>Prueba form pachecoart</title>
 </head>
 <body>
     <div class="wrapper">
         <form method="POST" action="phpmailer/send.php" enctype="multipart/form-data" class="form">
-            <input required type="text" class="form-input" placeholder="Nombre" name="nombre">
+            <input required type="text" class="form-input" placeholder="Nombre" name="name">
             <input required type="text" class="form-input" placeholder="E-mail" name="email">
             <div class="form-options options-form">
-                <h4 class="options-form-title">Elija lo que quiera</h4>
-                <label for="" class="options-form-item">
-                    <input checked type="radio" name="opcion" value="Si" class="options-form-input">
+                <h4 class="options-form-title">¿Le gustaria trabajar en Good Vibes?</h4>
+                <label class="options-form-item">
+                    <input checked type="radio" name="like" value="Si" class="options-form-input">
                     <span class="options-form-text">Si</span>
                 </label>
-                <label for="" class="options-form-item">
-                    <input type="radio" name="opcion" value="No se" class="options-form-input">
-                    <span class="options-form-text">No se</span>
+                <label class="options-form-item">
+                    <input type="radio" name="like" value="No" class="options-form-input">
+                    <span class="options-form-text">No</span>
                 </label>
 
             </div>
-            <textarea required name="mensaje" placeholder="Mensaje" class="form-input"></textarea>
+            <textarea required name="message" placeholder="Mensaje" class="form-input"></textarea>
             <div class="form-file file-form">
                 <label class="file-form-item">
-                    <input required name="C.V" type="file" accept=".doc, .pdf" class="file-form-input">
+                    <input class="file-form-input" required name="data" type="file" accept=".doc, .pdf">
                     <div class="file-form-button button">Elegir Archivo</div>
                 </label>
                 <div class="file-form-name"></div>
             </div>
         <label class="form-checkbox checkbox-form">
-            <input type="checkbox" name="elmejor" class="checkbox-form-input">
-            <span class="checkbox-form-text">Prueba de formulario</span>
-        </label>
+            <input type="checkbox" name="accept" class="checkbox-form-input">
+            <span class="checkbox-form-text">¿Desea enviar estos datos?</span>
+        </label> 
         <button class="form-button button-form">Enviar</button>
         </form>
     </div>
